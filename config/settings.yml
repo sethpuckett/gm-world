@@ -1,0 +1,2 @@
+dice_service:
+  base_url: http://dice:3000
