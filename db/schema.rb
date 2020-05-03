@@ -10,24 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_22_212233) do
+ActiveRecord::Schema.define(version: 2020_05_03_162316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "art_objects", force: :cascade do |t|
-    t.string "name"
-    t.integer "cost_in_gp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "gemstones", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "cost_in_gp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "roll_items", force: :cascade do |t|
+    t.string "type", null: false
+    t.jsonb "content", default: "{}", null: false
+    t.integer "range_min", null: false
+    t.integer "range_max", null: false
+    t.index ["content"], name: "index_roll_items_on_content", using: :gin
+    t.index ["type", "range_min", "range_max"], name: "index_roll_items_on_type_and_range_min_and_range_max"
   end
 
 end
