@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: roll_items
@@ -14,7 +16,7 @@
 #  index_roll_items_on_type_and_range_min_and_range_max  (type,range_min,range_max)
 #
 class RollItem < ApplicationRecord
-  validates :type, presence: true, uniqueness: { scope: [:range_min, :range_max] }
+  validates :type, presence: true, uniqueness: { scope: %i[range_min range_max] }
   validates :content, presence: true
   validates :range_min, presence: true, numericality: { greater_than: 0 }
   validates :range_max, presence: true, numericality: { greater_than: 0 }

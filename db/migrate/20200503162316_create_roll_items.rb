@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateRollItems < ActiveRecord::Migration[5.2]
   def change
     create_table :roll_items do |t|
@@ -8,6 +10,6 @@ class CreateRollItems < ActiveRecord::Migration[5.2]
     end
 
     add_index :roll_items, :content, using: :gin
-    add_index :roll_items, [:type, :range_min, :range_max]
+    add_index :roll_items, %i[type range_min range_max]
   end
 end
