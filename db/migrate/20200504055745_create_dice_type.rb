@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateDiceType < ActiveRecord::Migration[5.2]
   def change
     create_table :dice_types do |t|
