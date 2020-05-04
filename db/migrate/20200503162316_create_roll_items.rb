@@ -7,6 +7,8 @@ class CreateRollItems < ActiveRecord::Migration[5.2]
       t.jsonb :content, null: false, default: '{}'
       t.integer :range_min, null: false
       t.integer :range_max, null: false
+
+      t.timestamps
     end
 
     add_index :roll_items, :content, using: :gin

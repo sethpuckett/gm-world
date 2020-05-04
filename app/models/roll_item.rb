@@ -4,11 +4,13 @@
 #
 # Table name: roll_items
 #
-#  id        :bigint           not null, primary key
-#  content   :jsonb            not null
-#  item_type :string           not null
-#  range_max :integer          not null
-#  range_min :integer          not null
+#  id         :bigint           not null, primary key
+#  content    :jsonb            not null
+#  item_type  :string           not null
+#  range_max  :integer          not null
+#  range_min  :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 # Indexes
 #
