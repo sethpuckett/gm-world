@@ -3,9 +3,8 @@
 class RollItemService
   class << self
     def random_item(item_type)
-      # TODO: lookup sides based on new model (RollItemDiceType)
-      # sides = RollItemDiceType.find_by(type: SOME_TYPE).sides
-      roll = DiceGateway.roll(sides: 100)
+      sides = DiceType.find_by(item_type: item_type).sides
+      roll = DiceGateway.roll(sides: sides)
       RollItem.find_by(
         item_type: item_type,
         range_min: 1..roll,

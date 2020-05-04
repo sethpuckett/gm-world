@@ -7,8 +7,9 @@ class WorldsController < ApplicationController
   end
 
   def government
+    byebug
     items = RollItem.where(item_type: :forms_of_government)
-    @government = items.first { |i| i[:name] == name }
+    @government = items.find { |i| i.content['name'].downcase == name.downcase }
     render json: { error: 'invalid name' }, status: :bad_request if @government.blank?
   end
 

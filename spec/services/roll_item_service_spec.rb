@@ -16,6 +16,7 @@ RSpec.describe RollItemService do
   end
 
   before do
+    FactoryBot.create(:dice_type, item_type: item_type)
     allow(DiceGateway).to receive(:roll).and_return(roll)
   end
 
