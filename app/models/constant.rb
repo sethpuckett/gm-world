@@ -11,8 +11,9 @@ class Constant
     end
 
     def roll_item_types
-      [
-        :forms_of_government
+      %i[
+        forms_of_government
+        world_shaking_events
       ]
     end
   end

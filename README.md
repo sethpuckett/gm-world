@@ -8,6 +8,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 - [Forms of Government](#forms-of-government)
 - [Individual Government](#individual-government)
+- [World Shaking Events](#world-shaking-events)
 
 ---
 
@@ -57,5 +58,25 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 {
   "name": "Theocracy",
   "description": "Rulership falls to a direct representative or a collection of agents of a deity. The centers of power in a theocracy are usually located on sacred sites. In the Eberron campaign setting, the nation of Thrane is a theocracy devoted to the Silver Flame, a divine spirit that resides in Thrane's capital of Flamekeep."
+}
+```
+
+## World Shaking Events
+
+- `GET /worlds/world-shaking-events`: Retrieve a random world shaking event. See The Dungeon Master's Guide, 5th Edition, page 27.
+
+### Response Attributes
+
+- `event`: The type of world shaking event
+- `description`: A description of the event (where applicable)
+
+### Examples
+
+- `GET /worlds/world-shaking-event`
+
+```json
+{
+  "event": "Fall of a leader or an era",
+  "description": "Eras are often defined by the prominent leaders, innovators, and tyrants of the day. These people change the world and etch their signatures indelibly on the pages of history. When they rise to power, they shape the time and place where they live in monumental ways. When they fall from power or pass away, the ghost of their presence lingers. Determine the kind of leader that influences the new or passing era. You can choose the type of leader or determine one randomly using the Leader Types table."
 }
 ```
