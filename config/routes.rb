@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "worlds/government/:name", to: "worlds#government"
 
   get "worlds/world-shaking-event", to: "worlds#random_world_shaking_event"
+
+  get "worlds/leader-type", to: "worlds#random_leader_type"
 end

@@ -15,6 +15,11 @@ RSpec.describe WorldsController, type: :controller do
       :roll_item, item_type: :world_shaking_events, content: { name: name }, range_min: 1, range_max: 1
     )
   end
+  let!(:leader_type) do
+    FactoryBot.create(
+      :roll_item, item_type: :leader_types, content: { name: name }, range_min: 1, range_max: 1
+    )
+  end
 
   describe '#random_government' do
     render_views
@@ -69,6 +74,25 @@ RSpec.describe WorldsController, type: :controller do
 
     it 'returns world_shaking_event' do
       get :random_world_shaking_event, as: :json
+      expect(response.body).to eq(expected_response)
+    end
+  end
+
+  describe '#random_leader_type' do
+    render_views
+
+    let(:expected_response) do
+      { name: leader_type.content['name'] }.to_json
+    end
+
+    before do
+      allow(RollItemService).to(
+        receive(:random_item).with(:leader_types).and_return(leader_type)
+      )
+    end
+
+    it 'returns leader_type' do
+      get :random_leader_type, as: :json
       expect(response.body).to eq(expected_response)
     end
   end

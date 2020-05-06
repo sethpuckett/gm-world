@@ -9,6 +9,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 - [Forms of Government](#forms-of-government)
 - [Individual Government](#individual-government)
 - [World Shaking Events](#world-shaking-events)
+- [Leader Types](#leader-types)
 
 ---
 
@@ -78,5 +79,27 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 {
   "event": "Fall of a leader or an era",
   "description": "Eras are often defined by the prominent leaders, innovators, and tyrants of the day. These people change the world and etch their signatures indelibly on the pages of history. When they rise to power, they shape the time and place where they live in monumental ways. When they fall from power or pass away, the ghost of their presence lingers. Determine the kind of leader that influences the new or passing era. You can choose the type of leader or determine one randomly using the Leader Types table."
+}
+```
+
+---
+
+## Leader Types
+
+- `GET /worlds/leader-type`: Retrieve a random leader type. See The Dungeon Master's Guide, 5th Edition, pages 27.
+
+### Response Attributes
+
+- `name`: The leader type
+- `description`: A description of the leader type
+
+### Examples
+
+- `GET /worlds/leader-type`
+
+```json
+{
+  "leader_type": "Religious",
+  "description": "Religious leaders include deities' avatars, high priests, and messiahs, as well as those in charge of monasteries and leaders of influential religious sects."
 }
 ```

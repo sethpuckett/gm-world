@@ -16,6 +16,11 @@ class WorldsController < ApplicationController
     render :world_shaking_event
   end
 
+  def random_leader_type
+    @leader = RollItemService.random_item(:leader_types)
+    render :leader_type
+  end
+
   def item(item_type)
     items = RollItem.where(item_type: item_type)
     items.find { |i| i.content['name'].downcase == name.downcase }
