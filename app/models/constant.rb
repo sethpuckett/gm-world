@@ -13,7 +13,8 @@ class Constant
     def roll_item_types
       %i[
         forms_of_government
-        world_shaking_events
+        world_shaking_events,
+        leader_types
       ]
     end
   end
