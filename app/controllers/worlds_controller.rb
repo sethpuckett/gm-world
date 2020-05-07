@@ -7,7 +7,7 @@ class WorldsController < ApplicationController
   end
 
   def government
-    @government = item(:forms_of_government)
+    @government = item(:forms_of_government, 'government')
     render json: { error: 'invalid name' }, status: :bad_request if @government.blank?
   end
 
@@ -21,9 +21,9 @@ class WorldsController < ApplicationController
     render :leader_type
   end
 
-  def item(item_type)
+  def item(item_type, key)
     items = RollItem.where(item_type: item_type)
-    items.find { |i| i.content['name'].downcase == name.downcase }
+    items.find { |i| i.content[key].downcase == name.downcase }
   end
 
   def name

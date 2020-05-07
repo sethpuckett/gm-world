@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-json.name @government.content['name']
+json.government @government.content['government']
 json.description @government.content['description'] if @government.content['description'].present?

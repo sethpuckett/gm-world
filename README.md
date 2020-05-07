@@ -23,7 +23,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ### Response Attributes
 
-- `name`: The type of government
+- `government`: The type of government
 - `description`: A description of the government
 
 ### Examples
@@ -32,7 +32,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ```json
 {
-  "name": "Republic",
+  "government": "Republic",
   "description": "Government is entrusted to representatives of an established electorate who rule on behalf of the electors. Any democracy in which only landowners or certain classes can vote could be considered a republic."
 }
 ```
@@ -48,7 +48,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ### Response Attributes
 
-- `name`: The type of government
+- `government`: The type of government
 - `description`: A description of the government
 
 ### Examples
@@ -57,7 +57,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ```json
 {
-  "name": "Theocracy",
+  "government": "Theocracy",
   "description": "Rulership falls to a direct representative or a collection of agents of a deity. The centers of power in a theocracy are usually located on sacred sites. In the Eberron campaign setting, the nation of Thrane is a theocracy devoted to the Silver Flame, a divine spirit that resides in Thrane's capital of Flamekeep."
 }
 ```

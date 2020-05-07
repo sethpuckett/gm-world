@@ -2,97 +2,58 @@
 
 require 'rails_helper'
 
+RSpec.shared_examples 'a random item endpoint' do |item_type, route, json_key|
+  let(:name) { 'name' }
+  let(:expected_response) { content.to_json }
+  let(:content) do
+    c = {}
+    c[json_key] = name
+    c
+  end
+  let!(:item) do
+    FactoryBot.create(
+      :roll_item, item_type: :item_type, content: content, range_min: 1, range_max: 1
+    )
+  end
+
+  before do
+    allow(RollItemService).to(receive(:random_item).with(item_type).and_return(item))
+  end
+
+  it 'returns formatted item' do
+    get route, as: :json
+    expect(response.body).to eq(expected_response)
+  end
+end
+
 RSpec.describe WorldsController, type: :controller do
-  let(:name) { 'name_1' }
-  let(:name_2) { 'name_2' }
-  let!(:government) do
-    FactoryBot.create(
-      :roll_item, item_type: :forms_of_government, content: { name: name }, range_min: 1, range_max: 1
-    )
-  end
-  let!(:world_shaking_event) do
-    FactoryBot.create(
-      :roll_item, item_type: :world_shaking_events, content: { name: name }, range_min: 1, range_max: 1
-    )
-  end
-  let!(:leader_type) do
-    FactoryBot.create(
-      :roll_item, item_type: :leader_types, content: { name: name }, range_min: 1, range_max: 1
-    )
-  end
+  render_views
 
   describe '#random_government' do
-    render_views
+    it_behaves_like 'a random item endpoint', :forms_of_government, :random_government, :government
+  end
 
-    let(:expected_response) do
-      { name: government.content['name'] }.to_json
-    end
+  describe '#random_world_shaking_event' do
+    it_behaves_like 'a random item endpoint', :world_shaking_events, :random_world_shaking_event, :event
+  end
 
-    before do
-      allow(RollItemService).to(
-        receive(:random_item).with(:forms_of_government).and_return(government)
-      )
-    end
-
-    it 'returns government' do
-      get :random_government, as: :json
-      expect(response.body).to eq(expected_response)
-    end
+  describe '#random_leader_type' do
+    it_behaves_like 'a random item endpoint', :leader_types, :random_leader_type, :leader_type
   end
 
   describe '#government' do
-    render_views
-
+    let(:name_2) { 'name_2' }
     let(:params) { { name: name_2 } }
+    let(:content) { { government: name_2 } }
+    let(:expected_response) { content.to_json }
     let!(:government_2) do
       FactoryBot.create(
-        :roll_item, item_type: :forms_of_government, content: { name: name_2 }, range_min: 2, range_max: 2
+        :roll_item, item_type: :forms_of_government, content: content, range_min: 2, range_max: 2
       )
-    end
-    let(:expected_response) do
-      { name: government_2.content['name'] }.to_json
     end
 
     it 'returns government' do
       get :government, params: params, as: :json
-      expect(response.body).to eq(expected_response)
-    end
-  end
-
-  describe '#random_world_shaking_event' do
-    render_views
-
-    let(:expected_response) do
-      { name: world_shaking_event.content['name'] }.to_json
-    end
-
-    before do
-      allow(RollItemService).to(
-        receive(:random_item).with(:world_shaking_events).and_return(world_shaking_event)
-      )
-    end
-
-    it 'returns world_shaking_event' do
-      get :random_world_shaking_event, as: :json
-      expect(response.body).to eq(expected_response)
-    end
-  end
-
-  describe '#random_leader_type' do
-    render_views
-
-    let(:expected_response) do
-      { name: leader_type.content['name'] }.to_json
-    end
-
-    before do
-      allow(RollItemService).to(
-        receive(:random_item).with(:leader_types).and_return(leader_type)
-      )
-    end
-
-    it 'returns leader_type' do
-      get :random_leader_type, as: :json
       expect(response.body).to eq(expected_response)
     end
   end
