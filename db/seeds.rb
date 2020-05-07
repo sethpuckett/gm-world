@@ -6,6 +6,7 @@
 DiceType.create(item_type: :forms_of_government, sides: 100)
 DiceType.create(item_type: :world_shaking_events, sides: 10)
 DiceType.create(item_type: :leader_types, sides: 6)
+DiceType.create(item_type: :cataclysmic_disasters, sides: 10)
 
 # Dungeon Master's Guide: page 18
 RollItem.create(item_type: :forms_of_government, range_min: 1, range_max: 8, content: { name: 'Autocracy', description: 'One hereditary ruler wields absolute power. The autocrat either is supported by a well-developed bureaucracy or military or stands as the only authority in an otherwise anarchic society. The dynastic ruler could be immortal or undead. Aundair and Karrnath, two kingdoms in the Eberron campaign setting, have autocrats with royal blood in their veins. Whereas Queen Aurala of Aundair relies on wizar.ds and spies to enforce her will, Kaius, the vampire king of Karrnath, has a formidable army of living and undead soldiers under his command.' })
@@ -48,3 +49,15 @@ RollItem.create(item_type: :leader_types, range_min: 3, range_max: 3, content: {
 RollItem.create(item_type: :leader_types, range_min: 4, range_max: 4, content: { leader_type: 'Crime/underworld', description: 'At the broadest scale, a criminal or underworld leader wields power through a network of spies, bribes, and black-market trade. On the smallest scale, these are local gang bosses, pirate captains, and brigands.' })
 RollItem.create(item_type: :leader_types, range_min: 5, range_max: 5, content: { leader_type: 'Art/culture', description: 'A leader in art or culture is a virtuoso whose work reflects the spirit of the age and changes the way people think: a prominent playwright, bard, or court fool in whose words, art, or performance the people perceive universal truth. On a smaller scale, this might be an influential local poet, minstrel, satirist, or sculptor.' })
 RollItem.create(item_type: :leader_types, range_min: 6, range_max: 6, content: { leader_type: 'Philosophy/learning/magic', description: 'A major leader in philosophy, learning, or magic is a genius philosopher, a counselor to emperors, an enlightened thinker, the head of the highest institution of learning in the world, or an archmage. A minor leader might be a local sage, seer, hedge wizard, wise elder, or teacher.' })
+
+# Dungeon Master's Guide: page 28
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 1, range_max: 1, content: { disaster: 'Earthquake' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 2, range_max: 2, content: { disaster: 'Famine/drought' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 3, range_max: 3, content: { disaster: 'Fire' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 4, range_max: 4, content: { disaster: 'Flood' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 5, range_max: 5, content: { disaster: 'Plague/disease' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 6, range_max: 6, content: { disaster: 'Rain of fire (meteoric impact)' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 7, range_max: 7, content: { disaster: 'Storm (hurricane, tornado, tsunami)' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 8, range_max: 8, content: { disaster: 'Volcanic eruption' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 9, range_max: 9, content: { disaster: 'Magic gone awry or a planar warp' })
+RollItem.create(item_type: :cataclysmic_disasters, range_min: 10, range_max: 10, content: { disaster: 'Divine judgment' })

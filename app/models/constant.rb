@@ -15,6 +15,7 @@ class Constant
         forms_of_government
         world_shaking_events
         leader_types
+        cataclysmic_disasters
       ]
     end
   end

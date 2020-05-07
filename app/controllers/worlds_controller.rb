@@ -21,6 +21,11 @@ class WorldsController < ApplicationController
     render :leader_type
   end
 
+  def random_cataclysmic_disaster
+    @disaster = RollItemService.random_item(:cataclysmic_disasters)
+    render :cataclysmic_disaster
+  end
+
   def item(item_type, key)
     items = RollItem.where(item_type: item_type)
     items.find { |i| i.content[key].downcase == name.downcase }

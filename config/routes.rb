@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "worlds/world-shaking-event", to: "worlds#random_world_shaking_event"
 
   get "worlds/leader-type", to: "worlds#random_leader_type"
+
+  get "worlds/cataclysmic-disaster", to: "worlds#random_cataclysmic_disaster"
 end
