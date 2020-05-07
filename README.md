@@ -10,6 +10,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 - [Individual Government](#individual-government)
 - [World Shaking Events](#world-shaking-events)
 - [Leader Types](#leader-types)
+- [Cataclysmic Disasters](#cataclysmic-disasters)
 
 ---
 
@@ -37,6 +38,8 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 }
 ```
 
+---
+
 ## Individual Government
 
 - `GET /worlds/government/:name`: Retrieve information about a specific form of government based on its name. See The Dungeon Master's Guide, 5th Edition, pages 18-19.
@@ -61,6 +64,8 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
   "description": "Rulership falls to a direct representative or a collection of agents of a deity. The centers of power in a theocracy are usually located on sacred sites. In the Eberron campaign setting, the nation of Thrane is a theocracy devoted to the Silver Flame, a divine spirit that resides in Thrane's capital of Flamekeep."
 }
 ```
+
+---
 
 ## World Shaking Events
 
@@ -101,5 +106,25 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 {
   "leader_type": "Religious",
   "description": "Religious leaders include deities' avatars, high priests, and messiahs, as well as those in charge of monasteries and leaders of influential religious sects."
+}
+```
+
+---
+
+## Cataclysmic Disasters
+
+- `GET /worlds/cataclysmic-disaster`: Retrieve a random cataclysmic disaster. See The Dungeon Master's Guide, 5th Edition, pages 28.
+
+### Response Attributes
+
+- `disaster`: The cataclysmic disaster
+
+### Examples
+
+- `GET /worlds/cataclysmic-disaster`
+
+```json
+{
+  "disaster": "Famine/drought"
 }
 ```
