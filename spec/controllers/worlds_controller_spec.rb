@@ -45,6 +45,10 @@ RSpec.describe WorldsController, type: :controller do
     it_behaves_like 'a random item endpoint', :cataclysmic_disasters, :random_cataclysmic_disaster, :disaster
   end
 
+  describe '#random_invading_force' do
+    it_behaves_like 'a random item endpoint', :invading_forces, :random_invading_force, :force
+  end
+
   describe '#government' do
     let(:name_2) { 'name_2' }
     let(:params) { { name: name_2 } }

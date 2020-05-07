@@ -7,6 +7,7 @@ DiceType.create(item_type: :forms_of_government, sides: 100)
 DiceType.create(item_type: :world_shaking_events, sides: 10)
 DiceType.create(item_type: :leader_types, sides: 6)
 DiceType.create(item_type: :cataclysmic_disasters, sides: 10)
+DiceType.create(item_type: :invading_forces, sides: 8)
 
 # Dungeon Master's Guide: page 18
 RollItem.create(item_type: :forms_of_government, range_min: 1, range_max: 8, content: { name: 'Autocracy', description: 'One hereditary ruler wields absolute power. The autocrat either is supported by a well-developed bureaucracy or military or stands as the only authority in an otherwise anarchic society. The dynastic ruler could be immortal or undead. Aundair and Karrnath, two kingdoms in the Eberron campaign setting, have autocrats with royal blood in their veins. Whereas Queen Aurala of Aundair relies on wizar.ds and spies to enforce her will, Kaius, the vampire king of Karrnath, has a formidable army of living and undead soldiers under his command.' })
@@ -61,3 +62,13 @@ RollItem.create(item_type: :cataclysmic_disasters, range_min: 7, range_max: 7, c
 RollItem.create(item_type: :cataclysmic_disasters, range_min: 8, range_max: 8, content: { disaster: 'Volcanic eruption' })
 RollItem.create(item_type: :cataclysmic_disasters, range_min: 9, range_max: 9, content: { disaster: 'Magic gone awry or a planar warp' })
 RollItem.create(item_type: :cataclysmic_disasters, range_min: 10, range_max: 10, content: { disaster: 'Divine judgment' })
+
+# Dungeon Master's Guide: page 29
+RollItem.create(item_type: :invading_forces, range_min: 1, range_max: 1, content: { force: 'A criminal enterprise' })
+RollItem.create(item_type: :invading_forces, range_min: 2, range_max: 2, content: { force: 'Monsters or a unique monster' })
+RollItem.create(item_type: :invading_forces, range_min: 3, range_max: 3, content: { force: 'A planar threat' })
+RollItem.create(item_type: :invading_forces, range_min: 4, range_max: 4, content: { force: 'A past adversary reawakened, reborn, or resurgent' })
+RollItem.create(item_type: :invading_forces, range_min: 5, range_max: 5, content: { force: 'A splinter faction' })
+RollItem.create(item_type: :invading_forces, range_min: 6, range_max: 6, content: { force: 'A savage tribe' })
+RollItem.create(item_type: :invading_forces, range_min: 7, range_max: 7, content: { force: 'A secret society' })
+RollItem.create(item_type: :invading_forces, range_min: 8, range_max: 8, content: { force: 'A traitorous ally' })

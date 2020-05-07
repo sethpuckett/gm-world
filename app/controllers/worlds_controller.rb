@@ -26,6 +26,11 @@ class WorldsController < ApplicationController
     render :cataclysmic_disaster
   end
 
+  def random_invading_force
+    @force = RollItemService.random_item(:invading_forces)
+    render :invading_force
+  end
+
   def item(item_type, key)
     items = RollItem.where(item_type: item_type)
     items.find { |i| i.content[key].downcase == name.downcase }

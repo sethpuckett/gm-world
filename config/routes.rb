@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "worlds/leader-type", to: "worlds#random_leader_type"
 
   get "worlds/cataclysmic-disaster", to: "worlds#random_cataclysmic_disaster"
+
+  get "worlds/invading-force", to: "worlds#random_invading_force"
 end

@@ -91,7 +91,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ## Leader Types
 
-- `GET /worlds/leader-type`: Retrieve a random leader type. See The Dungeon Master's Guide, 5th Edition, pages 27.
+- `GET /worlds/leader-type`: Retrieve a random leader type. See The Dungeon Master's Guide, 5th Edition, page 27.
 
 ### Response Attributes
 
@@ -113,7 +113,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ## Cataclysmic Disasters
 
-- `GET /worlds/cataclysmic-disaster`: Retrieve a random cataclysmic disaster. See The Dungeon Master's Guide, 5th Edition, pages 28.
+- `GET /worlds/cataclysmic-disaster`: Retrieve a random cataclysmic disaster. See The Dungeon Master's Guide, 5th Edition, page 28.
 
 ### Response Attributes
 
@@ -126,5 +126,25 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 ```json
 {
   "disaster": "Famine/drought"
+}
+```
+
+---
+
+## Invading Forces
+
+- `GET /worlds/invading-force`: Retrieve a random invading force. See The Dungeon Master's Guide, 5th Edition, page 29.
+
+### Response Attributes
+
+- `force`: The invading force
+
+### Examples
+
+- `GET /worlds/invading-force`
+
+```json
+{
+  "force": "A savage tribe"
 }
 ```

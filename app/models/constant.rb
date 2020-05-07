@@ -16,6 +16,7 @@ class Constant
         world_shaking_events
         leader_types
         cataclysmic_disasters
+        invading_forces
       ]
     end
   end
