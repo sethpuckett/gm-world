@@ -11,6 +11,7 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 - [World Shaking Events](#world-shaking-events)
 - [Leader Types](#leader-types)
 - [Cataclysmic Disasters](#cataclysmic-disasters)
+- [Invading Forces](#invading-forces)
 
 ---
 
