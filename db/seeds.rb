@@ -8,6 +8,9 @@ DiceType.create(item_type: :world_shaking_events, sides: 10)
 DiceType.create(item_type: :leader_types, sides: 6)
 DiceType.create(item_type: :cataclysmic_disasters, sides: 10)
 DiceType.create(item_type: :invading_forces, sides: 8)
+DiceType.create(item_type: :extinction_or_depletion, sides: 8)
+DiceType.create(item_type: :new_organizations, sides: 10)
+DiceType.create(item_type: :discoveries, sides: 10)
 
 # Dungeon Master's Guide: page 18
 RollItem.create(item_type: :forms_of_government, range_min: 1, range_max: 8, content: { name: 'Autocracy', description: 'One hereditary ruler wields absolute power. The autocrat either is supported by a well-developed bureaucracy or military or stands as the only authority in an otherwise anarchic society. The dynastic ruler could be immortal or undead. Aundair and Karrnath, two kingdoms in the Eberron campaign setting, have autocrats with royal blood in their veins. Whereas Queen Aurala of Aundair relies on wizar.ds and spies to enforce her will, Kaius, the vampire king of Karrnath, has a formidable army of living and undead soldiers under his command.' })
@@ -72,3 +75,37 @@ RollItem.create(item_type: :invading_forces, range_min: 5, range_max: 5, content
 RollItem.create(item_type: :invading_forces, range_min: 6, range_max: 6, content: { force: 'A savage tribe' })
 RollItem.create(item_type: :invading_forces, range_min: 7, range_max: 7, content: { force: 'A secret society' })
 RollItem.create(item_type: :invading_forces, range_min: 8, range_max: 8, content: { force: 'A traitorous ally' })
+
+# Dungeon Master's Guide: page 30
+RollItem.create(item_type: :extinction_or_depletion, range_min: 1, range_max: 1, content: { lost_resource: 'A kind o f animal (insect , bird, fish, livestock)' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 2, range_max: 2, content: { lost_resource: 'Habitable land' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 3, range_max: 3, content: { lost_resource: 'Magic or magic-users (all magic, or specific kinds or schools of magic)' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 4, range_max: 4, content: { lost_resource: 'A mineral resource (gems, metals, ores)' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 5, range_max: 5, content: { lost_resource: 'A type of monster (unicorn, manticore, dragon)' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 6, range_max: 6, content: { lost_resource: 'A people (family line, clan, culture, race)' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 7, range_max: 7, content: { lost_resource: 'A kind of plant (crop, tree, herb, forest)' })
+RollItem.create(item_type: :extinction_or_depletion, range_min: 8, range_max: 8, content: { lost_resource: 'A waterway (river, lake, ocean)' })
+
+# Dungeon Master's Guide: page 31
+RollItem.create(item_type: :new_organizations, range_min: 1, range_max: 1, content: { organization: 'Crime syndicate/bandit confederacy' })
+RollItem.create(item_type: :new_organizations, range_min: 2, range_max: 2, content: { organization: 'Guild (masons, apothecaries, goldsmiths)' })
+RollItem.create(item_type: :new_organizations, range_min: 3, range_max: 3, content: { organization: 'Magical circle/society' })
+RollItem.create(item_type: :new_organizations, range_min: 4, range_max: 4, content: { organization: 'Military/knightly order' })
+RollItem.create(item_type: :new_organizations, range_min: 5, range_max: 5, content: { organization: 'New family dynasty/tribe/clan' })
+RollItem.create(item_type: :new_organizations, range_min: 6, range_max: 6, content: { organization: 'Philosophy/discipline dedicated to a principle or ideal' })
+RollItem.create(item_type: :new_organizations, range_min: 7, range_max: 7, content: { organization: 'Realm (village, town, duchy, kingdom)' })
+RollItem.create(item_type: :new_organizations, range_min: 8, range_max: 8, content: { organization: 'Religion/sect/denomination' })
+RollItem.create(item_type: :new_organizations, range_min: 9, range_max: 9, content: { organization: 'School/university' })
+RollItem.create(item_type: :new_organizations, range_min: 10, range_max: 10, content: { organization: 'Secret society/cult/cabal' })
+
+# Dungeon Master's Guide: page 31
+RollItem.create(item_type: :discoveries, range_min: 1, range_max: 1, content: { discovery: 'Ancient ruin/lost city of a legendary race' })
+RollItem.create(item_type: :discoveries, range_min: 2, range_max: 2, content: { discovery: 'Animal/monster/magical mutation' })
+RollItem.create(item_type: :discoveries, range_min: 3, range_max: 3, content: { discovery: 'lnvention/technology/magic (helpful, destructive)' })
+RollItem.create(item_type: :discoveries, range_min: 4, range_max: 4, content: { discovery: 'New (or forgotten) god or planar entity' })
+RollItem.create(item_type: :discoveries, range_min: 5, range_max: 5, content: { discovery: 'New (or rediscovered) artifact or religious relic' })
+RollItem.create(item_type: :discoveries, range_min: 6, range_max: 6, content: { discovery: 'New land (island, continent, lost world, demiplane)' })
+RollItem.create(item_type: :discoveries, range_min: 7, range_max: 7, content: { discovery: 'Otherworldly object (planar portal, alien spacecraft)' })
+RollItem.create(item_type: :discoveries, range_min: 8, range_max: 8, content: { discovery: 'People (race, tribe, lost civilization , colony)' })
+RollItem.create(item_type: :discoveries, range_min: 9, range_max: 9, content: { discovery: 'Plant (miracle herb, fungal parasite, sentient plant)' })
+RollItem.create(item_type: :discoveries, range_min: 10, range_max: 10, content: { discovery: 'Resource or wealth (gold, gems, mithral)' })

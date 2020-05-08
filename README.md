@@ -12,6 +12,9 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 - [Leader Types](#leader-types)
 - [Cataclysmic Disasters](#cataclysmic-disasters)
 - [Invading Forces](#invading-forces)
+- [Extinction or Depletion](#extinction-or-depletion)
+- [New Organizations](#new-organizations)
+- [Discoveries](#discoveries)
 
 ---
 
@@ -120,5 +123,65 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 ```json
 {
   "force": "A savage tribe"
+}
+```
+
+---
+
+## Extinction or Depletion
+
+- `GET /worlds/extinction-or-depletion`: Retrieve a random resource that no longer exists in the campaign world. See The Dungeon Master's Guide, 5th Edition, page 30.
+
+### Response Attributes
+
+- `lost_resource`: The resource that no longer exists in the campaign world
+
+### Examples
+
+- `GET /worlds/extinction-or-depletion`
+
+```json
+{
+  "lost_resource": "A type of monster (unicorn, manticore, dragon)"
+}
+```
+
+---
+
+## New Organizations
+
+- `GET /worlds/new-organization`: Retrieve a random organization to be founded in the campaign world. See The Dungeon Master's Guide, 5th Edition, page 31.
+
+### Response Attributes
+
+- `organization`: The new order, kingdom, religion, society, cabal, or cult to be founded
+
+### Examples
+
+- `GET /worlds/new-organization`
+
+```json
+{
+  "organization": "Crime syndicate/bandit confederacy"
+}
+```
+
+---
+
+## Discoveries
+
+- `GET /worlds/discovery`: Retrieve a random discovery, expansion, or invention. See The Dungeon Master's Guide, 5th Edition, page 31.
+
+### Response Attributes
+
+- `discovery`: The new campaign altering discovery, expansion, or invention
+
+### Examples
+
+- `GET /worlds/discovery`
+
+```json
+{
+  "discovery": "New (or rediscovered) artifact or religious relic"
 }
 ```

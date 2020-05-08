@@ -29,23 +29,35 @@ end
 RSpec.describe WorldsController, type: :controller do
   render_views
 
-  describe '#random_government' do
+  describe '#government' do
     it_behaves_like 'a random item endpoint', :forms_of_government, :government, :government
   end
 
-  describe '#random_world_shaking_event' do
+  describe '#world_shaking_event' do
     it_behaves_like 'a random item endpoint', :world_shaking_events, :world_shaking_event, :event
   end
 
-  describe '#random_leader_type' do
+  describe '#leader_type' do
     it_behaves_like 'a random item endpoint', :leader_types, :leader_type, :leader_type
   end
 
-  describe '#random_cataclysmic_disaster' do
+  describe '#cataclysmic_disaster' do
     it_behaves_like 'a random item endpoint', :cataclysmic_disasters, :cataclysmic_disaster, :disaster
   end
 
-  describe '#random_invading_force' do
+  describe '#invading_force' do
     it_behaves_like 'a random item endpoint', :invading_forces, :invading_force, :force
+  end
+
+  describe '#extinction_or_depletion' do
+    it_behaves_like 'a random item endpoint', :extinction_or_depletion, :extinction_or_depletion, :lost_resource
+  end
+
+  describe '#new_organization' do
+    it_behaves_like 'a random item endpoint', :new_organizations, :new_organization, :organization
+  end
+
+  describe '#discovery' do
+    it_behaves_like 'a random item endpoint', :discoveries, :discovery, :discovery
   end
 end

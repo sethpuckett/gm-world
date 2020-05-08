@@ -20,4 +20,16 @@ class WorldsController < ApplicationController
   def invading_force
     @force = RollItemService.random_item(:invading_forces)
   end
+
+  def extinction_or_depletion
+    @lost_resource = RollItemService.random_item(:extinction_or_depletion)
+  end
+
+  def new_organization
+    @organization = RollItemService.random_item(:new_organizations)
+  end
+
+  def discovery
+    @discovery = RollItemService.random_item(:discoveries)
+  end
 end

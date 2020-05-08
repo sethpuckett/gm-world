@@ -17,6 +17,9 @@ class Constant
         leader_types
         cataclysmic_disasters
         invading_forces
+        extinction_or_depletion
+        new_organizations
+        discoveries
       ]
     end
   end
