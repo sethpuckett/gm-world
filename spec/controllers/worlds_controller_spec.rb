@@ -30,39 +30,22 @@ RSpec.describe WorldsController, type: :controller do
   render_views
 
   describe '#random_government' do
-    it_behaves_like 'a random item endpoint', :forms_of_government, :random_government, :government
+    it_behaves_like 'a random item endpoint', :forms_of_government, :government, :government
   end
 
   describe '#random_world_shaking_event' do
-    it_behaves_like 'a random item endpoint', :world_shaking_events, :random_world_shaking_event, :event
+    it_behaves_like 'a random item endpoint', :world_shaking_events, :world_shaking_event, :event
   end
 
   describe '#random_leader_type' do
-    it_behaves_like 'a random item endpoint', :leader_types, :random_leader_type, :leader_type
+    it_behaves_like 'a random item endpoint', :leader_types, :leader_type, :leader_type
   end
 
   describe '#random_cataclysmic_disaster' do
-    it_behaves_like 'a random item endpoint', :cataclysmic_disasters, :random_cataclysmic_disaster, :disaster
+    it_behaves_like 'a random item endpoint', :cataclysmic_disasters, :cataclysmic_disaster, :disaster
   end
 
   describe '#random_invading_force' do
-    it_behaves_like 'a random item endpoint', :invading_forces, :random_invading_force, :force
-  end
-
-  describe '#government' do
-    let(:name_2) { 'name_2' }
-    let(:params) { { name: name_2 } }
-    let(:content) { { government: name_2 } }
-    let(:expected_response) { content.to_json }
-    let!(:government_2) do
-      FactoryBot.create(
-        :roll_item, item_type: :forms_of_government, content: content, range_min: 2, range_max: 2
-      )
-    end
-
-    it 'returns government' do
-      get :government, params: params, as: :json
-      expect(response.body).to eq(expected_response)
-    end
+    it_behaves_like 'a random item endpoint', :invading_forces, :invading_force, :force
   end
 end

@@ -41,33 +41,6 @@ It is part of the [GM Tools](https://github.com/sethpuckett/gm-tools-docker) sui
 
 ---
 
-## Individual Government
-
-- `GET /worlds/government/:name`: Retrieve information about a specific form of government based on its name. See The Dungeon Master's Guide, 5th Edition, pages 18-19.
-
-### Path Parameters
-
-- `:name`: the name of form of government
-  - possible values: `autocracy`, `bureaucracy`, `confederacy`, `democracy`, `dictatorship`, `feudalism`, `gerontocracy`, `hierarchy`, `magocracy`, `matriarchy`, `militocracy`, `monarchy`, `oligarchy`, `patriarchy`, `meritocracy`, `plutocracy`, `republic`, `satrapy`, `kleptocracy`, `theocracy`
-
-### Response Attributes
-
-- `government`: The type of government
-- `description`: A description of the government
-
-### Examples
-
-- `GET /worlds/government/theocracy`
-
-```json
-{
-  "government": "Theocracy",
-  "description": "Rulership falls to a direct representative or a collection of agents of a deity. The centers of power in a theocracy are usually located on sacred sites. In the Eberron campaign setting, the nation of Thrane is a theocracy devoted to the Silver Flame, a divine spirit that resides in Thrane's capital of Flamekeep."
-}
-```
-
----
-
 ## World Shaking Events
 
 - `GET /worlds/world-shaking-events`: Retrieve a random world shaking event. See The Dungeon Master's Guide, 5th Edition, page 27.
